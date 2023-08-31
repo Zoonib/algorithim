@@ -1,30 +1,27 @@
-#Level 1 Part 1
+#Level 1 Part 1 --- updated
 
-def bin_go (n :int):
-    for i in range(1, 101):
-        if i % 7 == 0:
+def bin_go(n:int):
+    for i in range(1, n+1):
+        if i %3 == 0 and i % 7 == 0:
+            print("bingo")
+        elif i % 7 == 0:
           print("go")  
         elif i % 3 == 0:
             print("bin")
-        
-            
-        elif i %3 == 0 and i % 7 == 0:
-            print("bingo")
         else:
             print(i)
-            
-#Level 1 Part 2
+# bin_go(100)
+      
+#Level 1 Part 2 --- updated
 #Compute the sum of digits in all numbers from 1 to n
 def sum_of_number(number: int):
     result = 0
-    for i in range (5):
-        current_number = number % 10
-        result = result + current_number
-        number = number // 10
-    return result
+    for i in range(1, number+1):
+        result += i #result = result + i
+        print(result)
 
-test_result = sum_of_number(50) 
-print(test_result)
+#1, 2, 3, 4, 5
+sum_of_number(5)
 
 #Level 2 Part 1
 #find Max number
